@@ -1,0 +1,24 @@
+{
+  "name": "Refresh URL Timer",
+  "description": "Schedules the refreshing of an URL at a certain time",
+  "author": "Josef Seidl",
+  "version": "0.2",
+  "manifest_version": 2,
+  "default_local": "en",
+  "browser_action": {
+    "default_icon": "urltimer-16.png",
+    "default_popup": "popup.html",
+    "default_title": "Refresh URL Time"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "urltimer-16.png",
+    "128": "urltimer-128.png"
+  },
+  "permissions": ["activeTab"]
+}

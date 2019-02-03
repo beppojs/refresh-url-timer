@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refresh URL Timer</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans;
+            font-size: 12px;
+        }
+
+        input {
+            margin-right: 6px;
+            width: 60px;
+        }
+
+        #label {
+            padding-bottom: 5px;
+        }
+
+        #controls {
+            width: 250px;
+        }
+
+        #messages {
+            margin-top: 20px;
+            color: red;
+        }
+
+        .timebox {
+            width: 80px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+<h3 id="label">Refresh URL Timer</h3>
+
+<div>
+    <div>
+        <span class="timebox">Current Time:</span><span id="time"></span>
+    </div>
+    <div style="margin-top: 5px;">
+        <span class="timebox">Refresh Time:</span><span id="time_refresh"></span>
+    </div>
+</div>
+
+<div id="controls">
+
+    <div style="margin-top: 15px;">
+        <input type="text" id="start_time" placeholder="17:00:00" value="17:00:00"/>
+        <label for="start_time">URL Refresh Time</label>
+    </div>
+
+    <div>
+        <input style="margin-top: 10px;" type="number" id="offset" placeholder="50" value="50"/>
+        <label for="offset">Offset in Milliseconds</label>
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button id="apply" tabindex="5">Apply</button>
+    </div>
+
+</div>
+
+
+<div id="messages"></div>
+
+
+
+<div style="margin-top: 10px;">
+    <label>
+        <input style="width:5px;" type="checkbox" id="autorefresh" value="autorefresh">
+        Auto Refresh until Change (Experimental)
+    </label>
+</div>
+
+
+<script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
